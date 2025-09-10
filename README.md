@@ -67,25 +67,25 @@ CREATE TABLE cv\_bilgileri (
 
 &nbsp;   id INT AUTO\_INCREMENT PRIMARY KEY,
 
-&nbsp;   ad VARCHAR(100),
+&nbsp;   first_name VARCHAR(100),
 
-&nbsp;   soyad VARCHAR(100),
+&nbsp;   last_name VARCHAR(100),
 
 &nbsp;   email VARCHAR(100),
 
-&nbsp;   telefon VARCHAR(50),
+&nbsp;   phone VARCHAR(50),
 
-&nbsp;   dogum\_tarihi DATE,
+&nbsp;   birth_date DATE,
 
-&nbsp;   egitim TEXT,
+&nbsp;   education TEXT,
 
-&nbsp;   deneyim TEXT,
+&nbsp;   experience TEXT,
 
-&nbsp;   yetenekler TEXT,
+&nbsp;   skills TEXT,
 
-&nbsp;   hakkinda TEXT,
+&nbsp;   about TEXT,
 
-&nbsp;   foto VARCHAR(255)
+&nbsp;   photo VARCHAR(255)
 
 );
 

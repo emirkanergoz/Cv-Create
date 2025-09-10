@@ -25,11 +25,11 @@ form.addEventListener("submit", function(e) {
     const phoneRegex = /^\d{10}$/;
 
     if(phone === "") {
-        errors.innerHTML = "Telefon alanını doldurun!";
+        errors.innerHTML = "Fill in the phone field!";
         return;
     }
     if(!phoneRegex.test(phone)) {
-        errors.innerHTML = "Telefon numarası 10 haneli olmalıdır!";
+        errors.innerHTML = "Phone number must be 10 digits!";
         return;
     }
 
@@ -51,7 +51,7 @@ addSkillBtn.addEventListener("click", function() {
     const level = skillLevel.value;
 
     if(skill === "" || level === "") {
-        alert("Lütfen yetenek ve seviyeyi girin!");
+        alert("Please enter skill and level!");
         return;
     }
 
