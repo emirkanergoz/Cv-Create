@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ssssssssss", $firstName, $lastName, $email, $phone, $birthDate, $education, $experience, $skillsJson, $about, $photoPath);
-    $stmt->execute();
+    
 
     if ($stmt->execute()) {
         $last_id = $stmt->insert_id;
