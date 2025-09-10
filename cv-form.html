@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="TR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>CV Project</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+    <body>
+        <h1 class="text-center" id="baslik">CV Form</h1>
+
+
+    <div class="container" style="max-width: 600px;">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-12">
+        <form action="cv_save.php" method="POST" enctype="multipart/form-data" novalidate>
+            <label for="first_name" class="form-label">First Name:</label>
+            <input type="text" id="first_name" name="first_name" class="form-control" required>
+
+            <label for="last_name" class="form-label">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" class="form-control" required>
+
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+
+            <label for="phone" class="form-label">Phone:</label>
+            <input type="tel" id="phone" name="phone" class="form-control" required>
+
+            <label for="birth_date" class="form-label">Birth Date:</label>
+            <input type="date" id="birth_date" name="birth_date" class="form-control" required>
+
+            <label for="education" class="form-label">Education:</label>
+            <textarea id="education" name="education" rows="4" cols="50" class="form-control" required></textarea>
+            <br>
+            <label for="experience" class="form-label">Experience:</label>
+            <textarea id="experience" name="experience" rows="4" cols="50" class="form-control" required></textarea>
+
+            <br>
+
+            <label for="skill" class="form-label">Skill:</label>
+            <div class="skill-group">
+                <input type="text" id="skill_input" name="skill" placeholder="Ex: Python" class="form-control" required>
+                <div class="input-group">
+                    <select id="skill_level" class="form-select" required>
+                        <option value="">Select Level:</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                    <button type="button" id="add_skill" class="btn btn-secondary">Add</button>
+
+                </div>
+            </div>
+
+
+            <h4>Skill List:</h4>
+            <ul id="skill_list" ></ul>
+
+            <input type="hidden" name="skills" id="skills_hidden">
+            <label for="about" class="form-label">About:</label>
+
+            <textarea name="about" id="about" rows="4" cols="50" class="form-control" required></textarea>
+
+
+            <label for="profile_pic" class="form-label">Profile Picture:</label>
+            <input type="file" id="profile_pic" name="profile_pic" accept="image/*" class="form-control" required>
+            <br>
+
+            <button type="submit" id="submit_btn" class="btn">Submit</button>
+
+            <div id="errors" style="color:red; margin-top:10px;"></div>
+            <br>
+            <br>
+        </form>
+            </div>
+        </div>
+    </div>
+        <script src="main.js"></script>
+    </body>
+</html>
